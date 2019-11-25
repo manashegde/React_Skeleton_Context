@@ -6,6 +6,8 @@ import NotFound from "components/NotFound";
 import Loading from "components/Loading";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
+import Columns from "components/Columns";
+import Column from "components/Column";
 import SessionTimeoutModal from "components/SessionTimeoutModal";
 import { routePaths } from "containers/Routes";
 import "./PrivateRoutes.css";
@@ -31,16 +33,38 @@ function PrivateRoutes({ sessionContext, children, ...props }) {
     <div id="private-routes">
       <SessionTimeoutModal />
       <Navbar />
-      <Switch>
-        <Route path={routePaths.home} component={AsyncHome} />
-        <Route path={matchUrl + "/crossing"} component={AsyncCrossing} />
-        <Route
-          path={matchUrl + "/dataMaintenance"}
-          component={AsyncDataMaintenance}
-        />
-        <Route component={NotFound} />
-      </Switch>
-      <Footer />
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "#1d5a8d",
+            height: "100%",
+            width: "10%"
+          }}
+        >
+        <ul>
+          <li className="sidebar-li">Menu1</li>
+          <li className="sidebar-li">Menu2</li>
+          <li className="sidebar-li">Menu3</li>
+          <li className="sidebar-li">Menu1</li>
+          <li className="sidebar-li">Menu1</li>
+        </ul>
+        </div>
+        <div>
+          <Switch>
+            <Route path={routePaths.home} component={AsyncHome} />
+            <Route path={matchUrl + "/crossing"} component={AsyncCrossing} />
+            <Route
+              path={matchUrl + "/dataMaintenance"}
+              component={AsyncDataMaintenance}
+            />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+      </div>
+      <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%" }}>
+        <Footer />
+      </div>
     </div>
   ) : (
     <Redirect to={{ pathname: "/", state: { from: props.location } }} />

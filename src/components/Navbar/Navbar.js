@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { pageCodes, routePaths } from "containers/Routes";
 import Image from "components/Image";
 import Icon from "components/Icon";
-
+import logoMain from "images/logo.png"
 import arFlag from "images/arabic.png";
 import enFlag from "images/english.png";
 import withSessionContext from "HOC/withSessionContext";
@@ -69,16 +69,16 @@ class Navbar extends React.Component {
               to="/authenticated/home"
               className="navbar-brand"
             >
-              {/* <Image
+              <Image
                 src={logoMain}
                 alt="brand logo"
-                style={{ height: "80px", width: "80px" }}
-              /> */}
+                style={{ height: "50px", width: "200px" }}
+              />
             </Link>
             <div>
-              <div style={{ color: "white" }}>
+              {/* <div style={{ color: "white" }}>
                 <Icon icon="fa fa-map-marker" />
-              </div>
+              </div> */}
               {/* <MenuBar
                 active={active}
                 setActive={this.setActive}
@@ -86,7 +86,7 @@ class Navbar extends React.Component {
               /> */}
               <div className="dropdown">
                 <div className="dropdown-trigger">
-                  <a className="button">{intl.get("menu1").d("menu1")}</a>
+                  <a className="button">{intl.get("Menu0").d("Menu0")}</a>
                 </div>
               </div>{" "}
               <div
@@ -130,14 +130,7 @@ class Navbar extends React.Component {
             </div>
           </div>
           <div className="navbar-right">
-            <div
-              style={{ color: "white", display: "flex" }}
-              className="date-time"
-            >
-              <Icon icon="fa fa-calendar" />
-              &nbsp;
-              <span>{new Date().toLocaleDateString()}</span>
-            </div>
+          
             <div
               className={
                 "dropdown" +
@@ -183,42 +176,6 @@ class Navbar extends React.Component {
               </div>
             </div>
 
-            {/* <div
-              className={
-                "dropdown" +
-                (locale === "en" ? " is-right" : "") +
-                (active === "locale" ? " is-active" : "")
-              }
-            >
-              <div
-                className="dropdown-trigger"
-                onClick={() => this.setActive("locale")}
-              >
-                <a className="button">
-                  <Image
-                    src={locale === "en" ? enFlag : arFlag}
-                    style={{ cursor: "pointer" }}
-                  />
-                  <Icon icon="fa fa-angle-down" />
-                </a>
-              </div>
-              <div className="dropdown-menu" role="menu">
-                <div className="dropdown-content">
-                  <span className="dropdown-item">
-                    <a
-                      onClick={this.toggleLocale}
-                      style={{ display: "flex", alignItems: "center" }}
-                    >
-                      <Image src={locale === "en" ? arFlag : enFlag} />{" "}
-                      &nbsp;&nbsp;
-                      <span style={{ color: "white", fontWeight: "600" }}>
-                        {locale === "en" ? "Arabic" : intl.get("english")}
-                      </span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </nav>

@@ -56,7 +56,7 @@ class Login extends React.Component {
   };
 
   authenticate = () => {
-    console.log("hiii", this.props)
+
     // this.props.history.push(routePaths.home)
     this._setState &&
       this._setState(

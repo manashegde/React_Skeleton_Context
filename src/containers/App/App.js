@@ -13,6 +13,7 @@ const basename =
   process.env.NODE_ENV === "production" ? "/nic-xbc-client/" : "";
 
 class App extends Component {
+
   render() {
     return (
       <SessionProvider>
