@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crossing should match snapshot 1`] = `
+<CrossingContextProvider>
+  <ErrorBoundary>
+    <div
+      id="crossing"
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/search"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/tripinfo"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/searchresult"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/hitreport"
+        />
+        <Route
+          component={[Function]}
+        />
+      </Switch>
+    </div>
+  </ErrorBoundary>
+</CrossingContextProvider>
+`;

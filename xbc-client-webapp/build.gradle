@@ -1,0 +1,140 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+		maven { url "https://plugins.gradle.org/m2/" }
+		jcenter()
+	}
+}
+
+plugins {
+	id 'java'
+	id 'war'
+	id 'eclipse'
+	id "net.wasdev.wlp.gradle.plugins.Liberty" version "2.4.1"
+	id 'com.jfrog.artifactory' version '4.7.5'
+}
+
+artifactory {
+    contextUrl = "https://xbcartifactory.crossmatch.com/artifactory"
+    resolve {
+        repository {
+            repoKey = 'xbc'
+            username = "xbcdev"
+            password = "42XC91c2Vyc1wveGJjZGV2Iiwic2NwIjoibWVtYmV"
+            maven = true
+        }
+    }
+}
+
+def getGitCurrentBranch = {
+	->
+	def currentBranchStdOut = new ByteArrayOutputStream()
+	exec {
+		commandLine "git", "rev-parse", "--abbrev-ref", "HEAD"
+		standardOutput = currentBranchStdOut
+	}
+	return currentBranchStdOut.toString().trim()
+}
+
+def getGitHash = {
+	->
+	def hashStdOut = new ByteArrayOutputStream()
+	exec {
+		commandLine "git", "rev-parse", "HEAD"
+		standardOutput = hashStdOut
+	}
+	return hashStdOut.toString().trim()
+}
+
+def getBuildNumber = {
+	->
+	def buildNumberStdOut = new ByteArrayOutputStream()
+	exec {
+		commandLine "git", "rev-list", "--count", "HEAD"
+		standardOutput = buildNumberStdOut
+	}
+	return buildNumberStdOut.toString().trim()
+}
+
+def getVersion = {
+	->
+	return getBuildNumber().toString().trim() + '-' + getGitHash().toString().trim().substring(0, 6)
+}
+
+group = 'sa.gov.nic.xbc.client'
+version = '0.1'
+
+description = """nic-xbc-client"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	jcenter()
+}
+
+war {
+	archiveName = baseName + '.' + extension
+}
+
+ext {
+	javaee = '7.0'
+	wlp = '18.0.0.2'
+	warContext = 'nic-xbc-client'
+	wlpServerName = 'nic-xbc-client'
+	nicXbcCommon = '0.1'
+	archiveNameWithVersion = project.name + '-' + version + '.war'
+}
+
+dependencies {
+	compileOnly "javax:javaee-api:${javaee}"
+	compile "sa.gov.nic.xbc.common:nic-xbc-common:${nicXbcCommon}"
+	compileOnly "com.ibm.websphere.appserver.runtime:wlp-javaee8:${wlp}"
+}
+
+liberty {
+	install {
+		runtimeUrl = "${wlp_runtimeUrl}"
+		baseDir = "${wlp_baseDir}"
+	}
+	server {
+		configFile = file('src/main/wlp/server.xml')
+		name = wlpServerName
+		apps = [war]
+	}
+}
+
+
+war {
+	manifest {
+		attributes(
+				"project-name": project.name,
+				"version": version,
+				"build-number": getBuildNumber(),
+				"git-hash": getGitHash(),
+				"build-host" : InetAddress.getLocalHost().getCanonicalHostName(),
+				"home": System.getProperty("user.home"),
+				"user": System.getProperty("user.name"),
+				"build-dir": System.getProperty("user.dir"),
+				"build-branch": getGitCurrentBranch(),
+				"build-time": new java.util.Date())
+	}
+}
+
+task createWarWithVersion {
+	dependsOn 'build'
+	doLast{
+		copy {
+			from """${buildDir}${System.getProperty("file.separator")}libs${System.getProperty("file.separator")}${war.archiveName}"""
+			into "${buildDir}${System.getProperty("file.separator")}libs"
+			eachFile { fcp ->
+				fcp.name = """${archiveNameWithVersion}"""
+			}
+			println("""created: ./build/libs/${archiveNameWithVersion}""")
+		}
+	}
+}

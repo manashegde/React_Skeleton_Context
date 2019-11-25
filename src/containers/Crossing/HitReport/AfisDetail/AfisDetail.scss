@@ -1,0 +1,10 @@
+@import "../../../../styles/colors.scss";
+#AfisDetail {
+  .biometricHitReportRow {
+    cursor: pointer;
+    &.active {
+      background-color: $green;
+      color: $white;
+    }
+  }
+}

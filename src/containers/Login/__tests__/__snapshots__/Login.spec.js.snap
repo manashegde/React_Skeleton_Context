@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should match snapshot 1`] = `
+<Login>
+  <div
+    id="Login"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100%",
+        "overflow": "auto",
+        "paddingTop": "5em",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <Image
+        src="logo-main.png"
+      >
+        <img
+          alt="blank"
+          src="logo-main.png"
+        />
+      </Image>
+      <Image
+        src="logo-secondary.png"
+        style={
+          Object {
+            "width": "260px",
+          }
+        }
+      >
+        <img
+          alt="blank"
+          src="logo-secondary.png"
+          style={
+            Object {
+              "width": "260px",
+            }
+          }
+        />
+      </Image>
+    </div>
+    <br />
+    <Box
+      style={
+        Object {
+          "background": "linear-gradient(180deg, #5A6A74 4.97%, #3F525E 31.49%)",
+          "boxShadow": "0px 4px 4px rgba(0, 0, 0, 0.25)",
+        }
+      }
+    >
+      <div
+        className="box"
+        style={
+          Object {
+            "background": "linear-gradient(180deg, #5A6A74 4.97%, #3F525E 31.49%)",
+            "boxShadow": "0px 4px 4px rgba(0, 0, 0, 0.25)",
+          }
+        }
+      >
+        <SubTitle
+          is="4"
+          style={
+            Object {
+              "color": "white",
+              "textAlign": "center",
+            }
+          }
+        >
+          <h5
+            className="subtitle is-4"
+            style={
+              Object {
+                "color": "white",
+                "textAlign": "center",
+              }
+            }
+          />
+        </SubTitle>
+        <SubTitle
+          is="4"
+          style={
+            Object {
+              "color": "white",
+              "textAlign": "center",
+            }
+          }
+        >
+          <h5
+            className="subtitle is-4"
+            style={
+              Object {
+                "color": "white",
+                "textAlign": "center",
+              }
+            }
+          />
+        </SubTitle>
+        <Form
+          style={
+            Object {
+              "margin": "0 auto",
+              "maxWidth": "350px",
+            }
+          }
+        >
+          <form
+            noValidate={true}
+            onSubmit={[Function]}
+            style={
+              Object {
+                "margin": "0 auto",
+                "maxWidth": "350px",
+              }
+            }
+          >
+            <TextField
+              dataTest="login-username-field"
+              disabled={false}
+              label={[Function]}
+            >
+              <div
+                className="field"
+              >
+                <Label
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontWeight": "400",
+                    }
+                  }
+                >
+                  <label
+                    className="label"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontWeight": "400",
+                      }
+                    }
+                  />
+                </Label>
+                <div
+                  className="control"
+                >
+                  <input
+                    className="input"
+                    data-test="login-username-field"
+                    disabled={false}
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+                  />
+                  <p
+                    className="help is-warning"
+                    style={
+                      Object {
+                        "fontSize": "15px",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </TextField>
+            <TextField
+              dataTest="login-password-field"
+              disabled={false}
+              label={[Function]}
+              type="password"
+            >
+              <div
+                className="field"
+              >
+                <Label
+                  style={
+                    Object {
+                      "color": "white",
+                      "fontWeight": "400",
+                    }
+                  }
+                >
+                  <label
+                    className="label"
+                    style={
+                      Object {
+                        "color": "white",
+                        "fontWeight": "400",
+                      }
+                    }
+                  />
+                </Label>
+                <div
+                  className="control"
+                >
+                  <input
+                    className="input"
+                    data-test="login-password-field"
+                    disabled={false}
+                    onChange={[Function]}
+                    type="password"
+                    value=""
+                  />
+                  <p
+                    className="help is-warning"
+                    style={
+                      Object {
+                        "fontSize": "15px",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </TextField>
+            <div
+              style={
+                Object {
+                  "textAlign": "center",
+                }
+              }
+            >
+              <a
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                  "justifyContent": "flex-end",
+                }
+              }
+            >
+              <Button
+                className="is-primary"
+                dataTest="login-btn"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <button
+                  className="button is-primary"
+                  data-test="login-btn"
+                  disabled={false}
+                  onClick={[Function]}
+                />
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </div>
+    </Box>
+  </div>
+</Login>
+`;

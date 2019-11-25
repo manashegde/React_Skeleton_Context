@@ -1,0 +1,15 @@
+#finger-verification {
+  margin: 0.75rem;
+  .fingerprint-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  .button.inactive {
+    background-color: #eee;
+  }
+}

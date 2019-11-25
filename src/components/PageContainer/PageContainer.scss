@@ -1,0 +1,54 @@
+@import "styles/colors.scss";
+#PageContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #F9F9F9;
+  overflow: auto;
+  label {
+    font-weight: 500;
+  }
+  .header-container {
+    padding-top: 30px;
+    display: flex;
+    .pageCode-container {
+      height: 50px;
+      padding: 10px;
+      border: 0.2px solid #DEDEDE;
+      background-color: $white;
+      display: flex;
+      align-items: center;
+      width: 125px;
+      box-shadow: 3px 3px 4px rgba(207, 207, 207, 0.25);
+      .subtitle {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    .title-container {
+      flex-grow: 1;
+      padding-left: 20px;
+      padding-right: 0;
+      .subtitle {
+        font-weight: 500;
+      }
+      hr {
+        // background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+
+div[dir="rtl"] {
+  #PageContainer {
+    .pageCode-container {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .title-container {
+      padding-right: 20px;
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../../styles/colors.scss";
+#hit-report {
+  font-size: 0.75rem;
+  padding: 0.75rem;
+
+  .traveler-container {
+    background-color: $white;
+    border: 2px solid #ddd;
+    .red-column {
+      background-color: $sec-red;
+    }
+    .image-column {
+      max-width: 224px;
+    }
+  }
+
+  table.table {
+    background: transparent;
+    thead tr th {
+      color: $prim-gray;
+      border: none;
+    }
+  }
+}

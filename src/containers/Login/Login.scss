@@ -1,0 +1,24 @@
+#Login {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  .login-container {
+    flex-grow: 1;
+    input.input {
+      border-radius: 1px;
+    }
+    .login-box {
+      margin: 0 auto;
+      background: linear-gradient(180deg, #5a6a74 4.97%, #3f525e 31.49%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      max-width: 500px;
+    }
+  }
+  .page-code {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 12px 0px 12px;
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+	<featureManager>
+		<feature>adminCenter-1.0</feature>
+	</featureManager>
+
+	<variable name="defaultHostName" value="localhost" />
+
+	<!-- Define an Administrator and non-Administrator -->
+	<basicRegistry id="basic">
+		<user name="admin" password="1234" />
+		<user name="user" password="5678" />
+	</basicRegistry>
+
+	<administrator-role>
+		<user>admin</user>
+	</administrator-role>
+
+	<iiopEndpoint id="defaultIiopEndpoint" iiopPort="-1">
+		<iiopsOptions iiopsPort="-1" sslRef="defaultSSLConfig" />
+	</iiopEndpoint>
+
+	<jndiEntry jndiName="rest/ep/xbcGateway/services"
+		value="http://localhost:19080/nic-xbc-gateway/xbc/gateway/" />
+
+	<jndiEntry jndiName="nicIdentityService"
+		value="https://xbcartifactory.crossmatch.com:50010/mocks-gateway/xbc/mocks/gateway/login/v1" />
+		
+	<httpEndpoint host="*" httpPort="39080" httpsPort="39443"
+		id="defaultHttpEndpoint" />
+
+</server>

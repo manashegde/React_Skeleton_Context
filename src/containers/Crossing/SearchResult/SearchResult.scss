@@ -1,0 +1,17 @@
+@import "styles/colors.scss";
+
+#search-result {
+  font-size: 0.75rem;
+  padding: 12px;
+  .dependents-list-table-container {
+    max-height: 175px;
+    overflow: auto;
+    box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+  }
+  .dependent-confirm-container {
+    display: flex;
+    align-Items: center;
+    margin-Top: 8px;
+  }
+}

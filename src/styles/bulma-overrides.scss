@@ -1,0 +1,73 @@
+@import "bulma/sass/utilities/initial-variables.sass";
+@import "bulma/sass/utilities/functions.sass";
+@import "./colors.scss";
+// Bulma overrides
+$primary: $green;
+$info: $turquoise;
+/*
+DROPDOWN
+*/
+
+// $dropdown-content-background-color: $dark-gray;
+$dropdown-content-arrow: $white;
+$dropdown-item-color: $white;
+$dropdown-item-hover-color: $navbarBg;
+$dropdown-item-hover-background-color: $light-gray;
+/**/
+
+/*
+TABS
+*/
+
+// $tabs-link-active-border-bottom-color: $white;
+// $tabs-link-active-color: $white;
+/**/
+
+/*
+PAGINATION
+*/
+
+// $pagination-current-background-color: $prim-gray;
+// $pagination-current-border-color: $prim-gray;
+// $pagination-ellipsis-color: $white;
+/**/
+
+// $desktop: 568px;
+/*
+NAVBAR
+*/
+
+// $navbar-background-color: $navbarBg;
+$navbar-item-color: $white;
+$navbar-item-hover-color: $white;
+$navbar-item-hover-background-color: $navbarBg;
+$navbar-height: 5.25rem;
+// $navbar-item-active-background-: red;
+// $navbar-dropdown-background-color: red;
+// $navbar-dropdown-border-top: 1px solid $prim-gray;
+$navbar-dropdown-arrow: $white;
+// $navbar-dropdown-item-hover-color: red;
+$navbar-dropdown-item-hover-background-color: transparent;
+// $navbar-dropdown-item-active-background-color: red;
+// $navbar-dropdown-item-active-color: $red;
+/**/
+
+/*
+INPUT
+*/
+
+$input-radius: 1px;
+.button {
+  min-width: 100px;
+}
+
+a.button.is-light,
+button.button.is-light {
+  background-color: #c4cdd4;
+  border-color: #c4cdd4;
+  color: $prim-gray;
+}
+
+.input.is-small {
+  border-radius: 1px;
+}

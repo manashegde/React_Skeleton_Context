@@ -1,0 +1,51 @@
+@import "../../../styles/colors.scss";
+
+#trip-info {
+
+  .selected-column {
+    display: flex;
+    align-Items: center;
+    background-Color: #ddd;
+    justify-Content: center;
+  }
+  .icon-column {
+    display: flex;
+    align-items: center;
+  }
+  .private-flight-checkbox {
+    display: flex;
+    align-items: center;
+    label {
+      font-size: 12px;
+    }
+  }
+
+  .edit-done-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trip-container {
+    padding-left: 4em;
+    padding-right: 4em;
+    margin-bottom: 1.5em;
+    label.label {
+      color: black;
+      font-weight: 600;
+    }
+  }
+
+  .trip-container > .columns {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    margin-bottom: 1em;
+  }
+
+  .buttons-container {
+    justify-Content: flex-end;
+    padding-Left: 4em;
+    padding-Right: 4em;
+  }
+}

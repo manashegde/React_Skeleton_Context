@@ -1,0 +1,24 @@
+[ignore]
+.*/node_modules/.*
+.*/.cache/.*
+.*/dist/.*
+.*/build/.*
+
+[include]
+./src/
+
+[libs]
+flow-typed/globals.js
+
+[lints]
+
+[options]
+module.name_mapper='^\/' -> '<PROJECT_ROOT>/src/'
+module.name_mapper='^components' -> '<PROJECT_ROOT>/src/components'
+module.name_mapper='^containers' -> '<PROJECT_ROOT>/src/containers'
+module.name_mapper='^images' -> '<PROJECT_ROOT>/src/images'
+module.name_mapper='^contexts' -> '<PROJECT_ROOT>/src/contexts'
+module.name_mapper='^utils' -> '<PROJECT_ROOT>/src/utils'
+module.name_mapper='^i18n' -> '<PROJECT_ROOT>/src/i18n'
+
+[strict]

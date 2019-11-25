@@ -1,0 +1,66 @@
+@import "./colors.scss";
+@import "./bulma-overrides.scss";
+@import "./animations.scss";
+@import "bulma/bulma.sass";
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  // background: $light-gray;
+}
+
+.was-validated {
+  .form-control {
+    &:valid ~ .help {
+      display: none;
+    }
+  }
+}
+
+div[dir="rtl"] {
+  .select {
+    display: block;
+  }
+  .field.is-grouped > .control:not(:last-child) {
+    margin-left: 0.75rem;
+  }
+  .buttons .button:not(:last-child) {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+  #notification-root {
+    left: 10px;
+    right: auto;
+    .notification {
+      padding: 1.25rem 1.5rem 1.25rem 2.5rem;
+      .delete {
+        left: 0.5rem;
+        right: auto;
+      }
+    }
+  }
+}
+
+.has-shadow {
+  box-shadow: -2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#notification-root {
+  max-width: 400px;
+  .notification {
+    cursor: pointer;
+  }
+  position: absolute;
+  top: 95px;
+  right: 10px;
+  min-width: 200px;
+  z-index: 40;
+}
+
+.padding-top-none {
+  padding-top: 0;
+}

@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should match snapshot 1`] = `
+<Search
+  apiService={
+    Object {
+      "post": [Function],
+      "urls": Object {
+        "completeCrossing": "/api/citizen/completeCrossing",
+        "fetchConsolidatedHitReport": "/api/watchlist/fetchConsolidatedHitReport",
+        "fetchExpectedFlights": "/api/flight/fetchExpected",
+        "login": "/api/login",
+        "searchCitizen": "/api/citizen/searchCitizen",
+        "setActualFlight": "/api/flight/setActual",
+      },
+    }
+  }
+  crossingContext={
+    Object {
+      "_setState": [Function],
+    }
+  }
+  history={
+    Object {
+      "push": [Function],
+    }
+  }
+  location={
+    Object {
+      "state": Object {
+        "crossingType": "entry",
+      },
+    }
+  }
+  sessionContext={
+    Object {
+      "addNotification": [Function],
+    }
+  }
+>
+  <Box
+    className="form-box"
+  >
+    <div
+      className="box form-box"
+    >
+      <SubTitle
+        dataTest="search-form-title"
+      >
+        <h5
+          className="subtitle is-5"
+          data-test="search-form-title"
+        />
+      </SubTitle>
+      <br />
+      <br />
+      <a
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      />
+      <br />
+      <br />
+      <Form>
+        <form
+          noValidate={true}
+          onSubmit={[Function]}
+        >
+          <Columns>
+            <div
+              className="columns"
+            >
+              <Column>
+                <div
+                  className="column"
+                >
+                  <TextField
+                    disabled={false}
+                    label={<Label />}
+                    name="travelDate"
+                  >
+                    <div
+                      className="field"
+                    >
+                      <Label>
+                        <label
+                          className="label"
+                        />
+                      </Label>
+                      <div
+                        className="control"
+                      >
+                        <input
+                          className="input"
+                          disabled={false}
+                          name="travelDate"
+                          onChange={[Function]}
+                          type="text"
+                          value=""
+                        />
+                        <p
+                          className="help is-warning"
+                          style={
+                            Object {
+                              "fontSize": "15px",
+                            }
+                          }
+                        />
+                      </div>
+                    </div>
+                  </TextField>
+                </div>
+              </Column>
+              <Column>
+                <div
+                  className="column"
+                >
+                  <Select
+                    defaultValue=""
+                    disabled={false}
+                    label={<Label />}
+                    name="travelerType"
+                    onChange={[Function]}
+                    options={
+                      Array [
+                        Object {
+                          "displayName": "citizen",
+                          "value": "citizen",
+                        },
+                        Object {
+                          "displayName": "alien",
+                          "value": "alien",
+                        },
+                        Object {
+                          "displayName": "visitor",
+                          "value": "visitor",
+                        },
+                        Object {
+                          "displayName": "pilgrim",
+                          "value": "pilgrim",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="field"
+                    >
+                      <Label>
+                        <label
+                          className="label"
+                        />
+                      </Label>
+                      <div
+                        className="control"
+                      >
+                        <div
+                          className="select"
+                        >
+                          <select
+                            disabled={false}
+                            name="travelerType"
+                            onChange={[Function]}
+                          >
+                            <option
+                              key="citizen"
+                              value="citizen"
+                            >
+                              citizen
+                            </option>
+                            <option
+                              key="alien"
+                              value="alien"
+                            >
+                              alien
+                            </option>
+                            <option
+                              key="visitor"
+                              value="visitor"
+                            >
+                              visitor
+                            </option>
+                            <option
+                              key="pilgrim"
+                              value="pilgrim"
+                            >
+                              pilgrim
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </Select>
+                </div>
+              </Column>
+            </div>
+          </Columns>
+          <Columns>
+            <div
+              className="columns"
+            >
+              <Column>
+                <div
+                  className="column"
+                >
+                  <TextField
+                    disabled={false}
+                    label={<Label />}
+                  >
+                    <div
+                      className="field"
+                    >
+                      <Label>
+                        <label
+                          className="label"
+                        />
+                      </Label>
+                      <div
+                        className="control"
+                      >
+                        <input
+                          className="input"
+                          disabled={false}
+                          onChange={[Function]}
+                          type="text"
+                          value=""
+                        />
+                        <p
+                          className="help is-warning"
+                          style={
+                            Object {
+                              "fontSize": "15px",
+                            }
+                          }
+                        />
+                      </div>
+                    </div>
+                  </TextField>
+                </div>
+              </Column>
+              <Column>
+                <div
+                  className="column"
+                >
+                  <TextField
+                    disabled={false}
+                    label={<Label />}
+                  >
+                    <div
+                      className="field"
+                    >
+                      <Label>
+                        <label
+                          className="label"
+                        />
+                      </Label>
+                      <div
+                        className="control"
+                      >
+                        <input
+                          className="input"
+                          disabled={false}
+                          onChange={[Function]}
+                          type="text"
+                          value=""
+                        />
+                        <p
+                          className="help is-warning"
+                          style={
+                            Object {
+                              "fontSize": "15px",
+                            }
+                          }
+                        />
+                      </div>
+                    </div>
+                  </TextField>
+                </div>
+              </Column>
+            </div>
+          </Columns>
+          <br />
+          <br />
+          <br />
+          <div
+            className="buttons"
+            style={
+              Object {
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <Link
+              className="button"
+              to="/authenticated/home"
+            >
+              <Link
+                className="button"
+                replace={false}
+                to="/authenticated/home"
+              >
+                <a
+                  className="button"
+                  href="/authenticated/home"
+                  onClick={[Function]}
+                >
+                  Cancel
+                </a>
+              </Link>
+            </Link>
+            <Button
+              className="is-primary"
+              dataTest="search-traveler-btn"
+              onClick={[Function]}
+            >
+              <button
+                className="button is-primary"
+                data-test="search-traveler-btn"
+                onClick={[Function]}
+              >
+                Search
+              </button>
+            </Button>
+          </div>
+        </form>
+      </Form>
+    </div>
+  </Box>
+</Search>
+`;
