@@ -37,7 +37,7 @@
     "xstate": "^3.3.3"
   },
   "devDependencies": {
-    "cypress": "^3.6.1",
+    "cypress": "^15.9.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
